@@ -2,6 +2,8 @@ import Head from 'next/head';
 //import Link from 'next/link';
 //import Image from 'next/image';
 //import styles from '../styles/Home.module.scss';
+import NavBar from './navbar';
+import Footer from './footer';
 
 export const siteTitle = 'Next.js WebApp • TypeScript';
 
@@ -24,8 +26,11 @@ export default function Layout({ children }: {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>{children}</main>
-
+      <div>
+        <NavBar />
+        <main>{children}</main>
+        <Footer />
+      </div>
     </>
   );
 }
