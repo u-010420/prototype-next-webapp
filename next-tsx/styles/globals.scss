@@ -144,3 +144,12 @@ small { font-size: 11px; }
   min-height: 100vh;
   .center-xy { @include center_xy; }
 }
+
+.navbar {
+  #navbarNav {
+    .navbar-nav {
+      margin-left: auto;
+      @include media-breakpoint-down(lg) { text-align: center; }
+    }
+  }
+}
