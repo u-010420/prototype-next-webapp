@@ -1,3 +1,4 @@
+/* @Navigation Bar • Dynamic Component */
 import React, { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -11,12 +12,12 @@ export default function NavBar() {
 
   return (
     <>
-      <nav className='navbar navbar-dark navbar-expand-md bg-black'>
-        <div className='container-fluid'>
+      <nav className="navbar navbar-dark navbar-expand-md bg-black">
+        <div className="container-fluid">
 
           <Link
-            className='navbar-brand fw-bold d-block-inline py-2'
-            href='/'
+            className="navbar-brand fw-bold d-block-inline py-2"
+            href="/"
           >
             <span>&#x1F680;</span>
             <Image
@@ -29,24 +30,24 @@ export default function NavBar() {
           </Link>
 
           <button
-            className='navbar-toggler'
-            type='button'
-            data-bs-toggle='collapse'
-            data-bs-target='#navbarNav'
-            aria-controls='navbarNav'
-            aria-expanded='false'
-            aria-label='Toggle navigation'
-          > <span className='navbar-toggler-icon'></span>
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          > <span className="navbar-toggler-icon"></span>
           </button>
 
-          <div className='collapse navbar-collapse' id='navbarNav'>
-            <ul className='navbar-nav'>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
 
-              <li className='nav-item'>
+              <li className="nav-item">
                 <Link
-                  className='nav-link active'
-                  aria-current='page'
-                  href='/'>
+                  className="nav-link active"
+                  aria-current="page"
+                  href="/">
                   HOME
                 </Link>
               </li>
