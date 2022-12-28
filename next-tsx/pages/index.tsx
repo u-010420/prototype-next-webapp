@@ -1,9 +1,7 @@
 /* @Index • WebApp (Home Page) */
 import Head from 'next/head';
-import Image from 'next/image';
 import { Inter } from '@next/font/google';
-import Layout, { siteTitle } from '../components/layout';
-import styles from '../styles/Home.module.scss';
+import Layout, { meta } from '../components/Layout';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -11,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>{siteTitle}</title>
+        <title>{meta.title}</title>
       </Head>
       <Layout>
         <div className="container-100vh">
