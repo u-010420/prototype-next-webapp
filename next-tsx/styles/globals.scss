@@ -1,5 +1,20 @@
 @import '~bootstrap/scss/bootstrap';
 
+@mixin center_xy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin fontsize_h1 {
+  font-size: 1.8rem;
+  @include media-breakpoint-up(sm) { font-size: 2.5rem; }
+  @include media-breakpoint-up(md) { font-size: 3.1rem; }
+  @include media-breakpoint-up(lg) { font-size: 4.5rem; }
+  @include media-breakpoint-up(xl) { font-size: 4.6rem; }
+}
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
@@ -110,6 +125,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  h1 { @include fontsize_h1; }
 }
 
 a {
@@ -126,10 +142,14 @@ small { font-size: 11px; }
 .container-100vh {
   position: relative;
   min-height: 100vh;
-  .center-xy {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .center-xy { @include center_xy; }
+}
+
+.navbar {
+  #navbarNav {
+    .navbar-nav {
+      margin-left: auto;
+      @include media-breakpoint-down(lg) { text-align: center; }
+    }
   }
 }
